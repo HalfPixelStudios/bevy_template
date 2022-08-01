@@ -1,0 +1,16 @@
+[package]
+name = "bevy_template"
+version = "0.1.0"
+edition = "2021"
+license = "MIT OR Apache-2.0"
+authors = ["nithinmuthukumar", "MrPicklePinosaur"]
+description = ""
+repository = ""
+
+[features]
+default = ["bevy_sprite", "bevy_ui"]
+bevy_sprite = ["bevy/bevy_sprite", "bevy/bevy_render"]
+bevy_ui = ["bevy/bevy_ui", "bevy/bevy_text", "bevy/bevy_render"]
+
+[dependencies]
+bevy = { version = "0.7.0", default-features = false, features = [ "render", "animation", "bevy_winit", "bevy_gilrs", "png", "hdr", "filesystem_watcher", "x11", "trace" ] }
